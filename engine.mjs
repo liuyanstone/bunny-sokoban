@@ -1,8 +1,16 @@
+import {SCORE} from './config.mjs';
+export {SCORE} from './config.mjs';
 export const DIRECTIONS={U:[0,-1],D:[0,1],L:[-1,0],R:[1,0]};
 export function parse(rows){
  const width=rows[0].length,height=rows.length,walls=[],goals=[],boxes=[];let player=-1;
  rows.forEach((r,y)=>[...r].forEach((c,x)=>{const p=y*width+x;if(c==='#')walls.push(p);if('.+*'.includes(c))goals.push(p);if('$*'.includes(c))boxes.push(p);if('@+'.includes(c))player=p;}));
- return {width,height,walls,goals,player,boxes:boxes.sort((a,b)=>a-b),moves:0,pushes:0};
+ // Exterior padding is not walkable; preserve the original puzzle walls.
+ const voids=[],outside=new Set(),queue=[];
+ const add=p=>{if(p>=0&&p<width*height&&!outside.has(p)&&rows[Math.floor(p/width)][p%width]===' '){outside.add(p);queue.push(p);}};
+ for(let x=0;x<width;x++){add(x);add((height-1)*width+x);}for(let y=0;y<height;y++){add(y*width);add(y*width+width-1);}
+ for(let i=0;i<queue.length;i++){const p=queue[i],x=p%width,y=Math.floor(p/width);if(x>0)add(p-1);if(x<width-1)add(p+1);if(y>0)add(p-width);if(y<height-1)add(p+width);}
+ for(const p of outside){voids.push(p);walls.push(p);}
+ return {width,height,walls,voids,goals,player,boxes:boxes.sort((a,b)=>a-b),moves:0,pushes:0};
 }
 export function advance(board,state,direction){
  const delta=DIRECTIONS[direction];if(!delta)return null;
@@ -17,5 +25,4 @@ export function won(board,state){return state.boxes.length===board.goals.length&
 export function stateKey(state){return state.player+':'+[...state.boxes].sort((a,b)=>a-b).join(',');}
 export function replay(board,state,solution){let s=state;for(const d of solution){s=advance(board,s,d);if(!s)return null;}return won(board,s)?s:null;}
 export function knownSuffix(board,start,solution,current){let s=start;for(let i=0;i<=solution.length;i++){if(stateKey(s)===stateKey(current))return solution.slice(i);if(i<solution.length){s=advance(board,s,solution[i]);if(!s)return null;}}return null;}
-export const SCORE={easy:100,medium:200,hard:350};
 export function award(progress,id,tier,sessionWon){if(sessionWon)return progress;return {...progress,total:(progress.total||0)+SCORE[tier],completed:{...progress.completed,[id]:(progress.completed?.[id]||0)+1}};}

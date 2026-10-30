@@ -1,0 +1,11 @@
+Copyright (c) by David W. Skinner.
+E-mail: sasquatch98930@yahoo.com
+These levels may be freely distributed provided they are credited with the author's name and e-mail address.
+
+The above author notice and permission are reproduced from Skinner.sok,
+which is included unchanged in collections/Skinner.sok.
+Source: https://github.com/acmepjz/puzzleboy/blob/master/mfccourse/YASC/Skinner.sok
+Author's original collection page (archived mirror):
+https://www.onlinespiele-sammlung.de/sokoban/sokobangames/skinner/
+Original puzzle titles and playable layouts are retained. The expert/master
+selection, ordering, rectangular padding and replay verification are by this game.

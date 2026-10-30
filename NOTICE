@@ -17,3 +17,23 @@ Original file paths and puzzle numbers are retained on every level.
 This game is not an official Google product.
 
 Bunny Box Garden game implementation and SVG artwork: created for liuyanstone.
+
+Sasquatch level data and bundled solution sequences
+Copyright (c) by David W. Skinner.
+E-mail: sasquatch98930@yahoo.com
+These levels may be freely distributed provided they are credited with the author's name and e-mail address.
+
+400 levels selected from Sasquatch I–XII. Original puzzle titles and playable
+layouts are retained. Rows are padded for rectangular rendering; outside
+padding is marked non-playable. A complete, unchanged copy of the source
+collection and its notes/solutions is in collections/Skinner.sok.
+Source: https://github.com/acmepjz/puzzleboy/blob/master/mfccourse/YASC/Skinner.sok
+Bundled complete solutions were replay-verified independently by this game.
+
+Reference app: 推箱子大全-解谜5000个有趣的关卡, App Store ID 1057916274.
+Its public listing describes crowded warehouses, limited passages and pushing
+order, but does not disclose a definitive highest-two-tier puzzle inventory
+or difficulty thresholds. This game's Expert/Master tiers are our curated
+classic multi-crate interpretation, not a reproduction or a claim of exact
+difficulty equivalence to that app. No reference-app code, artwork or levels
+were extracted.

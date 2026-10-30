@@ -15,5 +15,29 @@
       "path": "hard/000.txt",
       "sha256": "c320e8b1f5a26be7a85dff18147a7decae3c5e765c38ff56e30ebf8551d331f4"
     }
+  },
+  "advanced": {
+    "title": "David W. Skinner, Sasquatch I\u2013XII (400 selected levels)",
+    "source": "https://github.com/acmepjz/puzzleboy/blob/master/mfccourse/YASC/Skinner.sok",
+    "sha256": "0011ecea5f2748937153d5deaa157fb0523b0d55e774bc3d14913a7ecad8b263",
+    "author": "David W. Skinner",
+    "email": "sasquatch98930@yahoo.com",
+    "license": "Redistribution allowed with author name and email credit; see licenses/skinner-permission.txt",
+    "expert": {
+      "levels": 200,
+      "verifiedSolutionPushes": [
+        30,
+        85
+      ]
+    },
+    "master": {
+      "levels": 200,
+      "verifiedSolutionPushes": [
+        86,
+        1556
+      ]
+    },
+    "note": "Move/push counts describe the bundled verified solutions, not proven minima or the reference app\u2019s private difficulty scale.",
+    "commit": "f346bdf886ab6f8d37fbdcf30d21f8c9a9f163cc"
   }
 }

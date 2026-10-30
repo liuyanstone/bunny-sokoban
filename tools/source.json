@@ -1,0 +1,19 @@
+{
+  "repository": "https://github.com/google-deepmind/boxoban-levels",
+  "commit": "78011d8c86ad423bfb2e1005012393b4c3c24409",
+  "license": "Apache-2.0",
+  "files": {
+    "easy": {
+      "path": "unfiltered/train/000.txt",
+      "sha256": "674dda499261deface252c90077ae67181b5c7704c235baf0dd0bd2d16bf072e"
+    },
+    "medium": {
+      "path": "medium/train/000.txt",
+      "sha256": "b44e6dac95d03c0f29158252eafe7b1d97a3f3b447743a23617efa66e735167b"
+    },
+    "hard": {
+      "path": "hard/000.txt",
+      "sha256": "c320e8b1f5a26be7a85dff18147a7decae3c5e765c38ff56e30ebf8551d331f4"
+    }
+  }
+}

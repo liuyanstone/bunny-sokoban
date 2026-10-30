@@ -1,0 +1,19 @@
+Boxoban level data
+Copyright 2018 The Boxoban Authors.
+Licensed under the Apache License, Version 2.0 (see licenses/boxoban-Apache-2.0.txt).
+Source: https://github.com/google-deepmind/boxoban-levels
+Source revision: see tools/source.json.
+
+Citation requested by the original dataset:
+Arthur Guez, Mehdi Mirza, Karol Gregor, Rishabh Kabra, Sebastien Racaniere,
+Theophane Weber, David Raposo, Adam Santoro, Laurent Orseau, Tom Eccles,
+Greg Wayne, David Silver, Timothy Lillicrap and Victor Valdes (2018).
+An investigation of Model-free planning: boxoban levels.
+
+Modifications: selected 200 puzzles per tier; grouped/sorted by verified
+push counts; removed unreachable empty cells and excess wall borders;
+added stable game IDs and complete, independently replay-verified solutions.
+Original file paths and puzzle numbers are retained on every level.
+This game is not an official Google product.
+
+Bunny Box Garden game implementation and SVG artwork: created for liuyanstone.

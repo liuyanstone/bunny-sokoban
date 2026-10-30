@@ -1,4 +1,4 @@
-import {DIRECTIONS} from './engine.mjs?v=2';
+import {DIRECTIONS} from './engine.mjs?v=3';
 import {assignmentCost} from './assignment.mjs';
 const DIR=Object.keys(DIRECTIONS);
 const permutations=[];function permute(a=[],left=[0,1,2,3]){if(!left.length)permutations.push(a);else left.forEach((n,i)=>permute([...a,n],left.filter((_,j)=>j!==i)));}permute();
